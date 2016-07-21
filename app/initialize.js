@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import counterApp from './reducers';
+import Reducers from './reducers';
 import App from 'components/App';
 
-const store = createStore(counterApp, module.hot && module.hot.data && module.hot.data.counter || 0);
+const store = createStore(Reducers, (module.hot && module.hot.data || {}), window.devToolsExtension && window.devToolsExtension());
 
 if (module.hot) {
   module.hot.accept('./reducers', () => {
@@ -14,7 +14,7 @@ if (module.hot) {
   module.hot.accept();
 
   module.hot.dispose((data) => {
-    data.counter = store.getState();
+    data = store.getState();
     [].slice.apply(document.querySelector('#app').children).forEach(function(c) { c.remove() });
   });
 }
