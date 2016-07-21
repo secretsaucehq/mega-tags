@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import CommonOutput from '../components/output/Common'
+import CommonOutput from '../components/outputs/Common'
 
 const mapStateToProps = (state) => {
   return { output: state.output }
