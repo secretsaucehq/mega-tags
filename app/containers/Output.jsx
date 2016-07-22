@@ -7,7 +7,7 @@ const mapStateToProps = (state) => {
 }
 
 const Output = ({ output }) => (
-  <CommonOutput output={output.Common} />
+  <CommonOutput {...output.Common} />
 )
 
 export default connect(mapStateToProps)(Output)
