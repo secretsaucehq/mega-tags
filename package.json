@@ -12,6 +12,13 @@
     "prod": "brunch build --production",
     "test": "jest"
   },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/react-dom/",
+      "<rootDir>/node_modules/react-addons-test-utils/"
+    ]
+  },
   "dependencies": {
     "react": "~15.2.1",
     "react-dom": "~15.2.1",
