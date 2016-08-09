@@ -4,7 +4,7 @@ const handleChange = (type, onChange, evt) => {
   onChange({[type]: evt.target.value})
 }
 
-const Common = ({ onChange }) => (
+const CommonInput = ({ onChange }) => (
   <div className='input-common'>
     <input
       onChange={handleChange.bind(null, 'title', onChange)}
@@ -17,9 +17,9 @@ const Common = ({ onChange }) => (
   </div>
 )
 
-Common.propTypes = {
+CommonInput.propTypes = {
   onChange: PropTypes.func.isRequired
 }
 
-export default Common
+export default CommonInput
 

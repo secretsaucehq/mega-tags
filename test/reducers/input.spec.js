@@ -1,9 +1,7 @@
-jest.unmock('../../app/reducers/input')
-jest.unmock('../../app/actions/common')
-
-import inputReducer from '../../app/reducers/input'
-import initialState from '../../app/data/initial-state'
-import { updateCommon } from '../../app/actions/common'
+import inputReducer from 'reducers/input'
+import initialState from 'data/initial-state'
+import { updateCommon } from 'actions/common'
+import { expect } from 'chai'
 
 describe('inputReducer', () => {
   describe('Common', () => {
@@ -14,7 +12,7 @@ describe('inputReducer', () => {
       }
       const action = updateCommon(updatedCommon)
       const newState = inputReducer(initialState.output, action)
-      expect(newState.Common).toEqual(updatedCommon)
+      expect(newState.Common).to.deep.equal(updatedCommon)
     })
   })
 })
