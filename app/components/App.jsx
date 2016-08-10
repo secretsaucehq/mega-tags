@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../containers/Input'
-import Output from '../containers/Output'
+import Input from 'app/containers/Input'
+import Output from 'app/containers/Output'
 
 export default class App extends React.Component {
   render() {

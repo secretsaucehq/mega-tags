@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import CommonInput from '../components/inputs/Common'
-import { updateCommon } from '../actions/common'
+import CommonInput from 'app/components/inputs/Common'
+import { updateCommon } from 'app/actions/common'
 
 const Input = ({ dispatch }) => (
   <div>

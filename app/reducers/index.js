@@ -1,5 +1,5 @@
 import { combineReducers  } from 'redux'
-import input from './input'
+import input from 'app/reducers/input'
 
 export default combineReducers({
   output: input

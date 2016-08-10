@@ -1,4 +1,4 @@
-import { Actions } from '../actions'
+import { Actions } from 'app/actions'
 
 const updateCommon = (state, action) => {
   switch (action.type) {

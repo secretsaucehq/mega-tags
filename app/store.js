@@ -1,6 +1,6 @@
 import { createStore, compose } from 'redux';
-import rootReducer from './reducers';
-import initialState from './data/initial-state'
+import rootReducer from 'app/reducers';
+import initialState from 'app/data/initial-state'
 
 const enhancers = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f

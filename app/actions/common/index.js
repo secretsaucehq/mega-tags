@@ -1,4 +1,4 @@
-import { Actions } from '../index'
+import { Actions } from 'app/actions/index'
 
 export const updateCommon = (updatedCommon) => {
   return {
