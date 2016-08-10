@@ -1,20 +1,37 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import TestUtils from 'react-addons-test-utils'
+import { shallow  } from 'enzyme'
+import chai, { expect } from 'chai'
+import spies from 'chai-spies'
 import CommonInput from 'components/inputs/Common'
-import { expect } from 'chai'
+
+chai.use(spies)
 
 describe('CommonInput', () => {
-  it('calls the onChange function with the input value', () => {
-    const onChangeCallback = (val) => {
-      console.log('callback triggered')
-    }
-    const renderedInput = TestUtils.renderIntoDocument(
-      <CommonInput onChange={onChangeCallback} />
-    )
+  const minProps = { onChange: () => {} }
+  const minWrapper = () => {
+    return shallow(<CommonInput {...minProps} />)
+  }
 
-    const input =  TestUtils.findRenderedDOMComponentWithTag(renderedInput, 'input')
-    // TestUtils.Simulate.change(input)
+  it('renders the wrapper element', () => {
+    expect(minWrapper().find('.input-common').length).to.equal(1)
+  })
+
+  it('renders input elements', ()  => {
+    expect(minWrapper().find('input').length).to.equal(2)
+  })
+
+  it('defines the onChange callback', () => {
+    expect(minWrapper().props().onChange).to.be.defined
+  })
+
+  it('calls the onChange function with the input value', () => {
+    const onChange = chai.spy()
+    const wrapper = shallow(<CommonInput {...minProps} onChange={onChange} />)
+    wrapper
+      .find('input').at(0)
+      .props()
+      .onChange({target: {value: '123123'}}, onChange)
+    expect(onChange).to.have.been.called();
   })
 })
 
