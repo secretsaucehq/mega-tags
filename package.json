@@ -22,6 +22,7 @@
   "devDependencies": {
     "auto-reload-brunch": "^2.7.0",
     "babel-brunch": "~6.0.0",
+    "babel-plugin-module-alias": "^1.6.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "~6.3.13",
@@ -36,8 +37,9 @@
     "enzyme": "^2.4.1",
     "hmr-brunch": "^0.1.0",
     "javascript-brunch": "^2.0.0",
+    "jsdom": "^9.4.1",
     "mocha": "^3.0.2",
-    "react-addons-test-utils": "^15.2.1",
+    "react-addons-test-utils": "~15.2.1",
     "uglify-js-brunch": "^2.0.0"
   }
 }

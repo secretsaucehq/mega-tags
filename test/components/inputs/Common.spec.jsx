@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow  } from 'enzyme'
 import chai, { expect } from 'chai'
 import spies from 'chai-spies'
-import CommonInput from 'components/inputs/Common'
+import CommonInput from 'app/components/inputs/Common'
 
 chai.use(spies)
 

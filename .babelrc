@@ -1,5 +1,10 @@
 {
   "presets": ["es2015", "react"],
-  "plugins": ["transform-object-rest-spread", ["resolver", { "resolveDirs": ["app"] }]]
+  "plugins": [
+    "transform-object-rest-spread",
+    ["module-alias", [
+      { "src": "./app", "expose": "app" }
+    ]]
+  ]
 }
 

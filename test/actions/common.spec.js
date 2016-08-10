@@ -1,6 +1,6 @@
-import initialState from 'data/initial-state'
-import { Actions } from 'actions'
-import { updateCommon } from 'actions/common'
+import initialState from 'app/data/initial-state'
+import { Actions } from 'app/actions'
+import { updateCommon } from 'app/actions/common'
 import { expect } from 'chai'
 
 describe('Actions', () => {
