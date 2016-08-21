@@ -1,19 +1,18 @@
 import React, { PropTypes } from 'react'
-
-const handleChange = (type, onChange, evt) => {
-  onChange({[type]: evt.target.value})
-}
+import TextInput from 'app/components/inputs/TextInput'
 
 const CommonInput = ({ onChange }) => (
   <div className='input-common'>
-    <input
-      onChange={handleChange.bind(null, 'title', onChange)}
-      type='text'
-      placeholder='Title' />
-    <input
-      onChange={handleChange.bind(null, 'description', onChange)}
-      type='text'
-      placeholder='Description' />
+    <h3>Common</h3>
+    <TextInput metaName='title'
+      placeholder='Title'
+      onChange={onChange} />
+    <TextInput metaName='description'
+      placeholder='Description'
+      onChange={onChange} />
+    <TextInput metaName='image'
+      placeholder='Site Image'
+      onChange={onChange} />
   </div>
 )
 

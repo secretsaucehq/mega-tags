@@ -2,7 +2,8 @@ export default {
   output: {
     Common: {
       title: '',
-      description: ''
+      description: '',
+      image: ''
     }
   }
 }
