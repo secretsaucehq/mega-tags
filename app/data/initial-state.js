@@ -9,7 +9,7 @@ export default {
       card: '',
       site: '',
       creator: '',
-      'image:src': '',
+      image: '',
       player: ''
     }
   }

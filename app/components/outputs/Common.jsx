@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react'
 const Common = ({ title, description, image }) => {
   return (
     <div className='output-common'>
+      <h3>Common</h3>
       <div
         dangerouslySetInnerHTML={{__html: `meta itemprop="name" content="${title}"`}} />
       <div

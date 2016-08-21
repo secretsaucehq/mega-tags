@@ -5,13 +5,16 @@ const CommonInput = ({ onChange }) => (
   <div className='input-common'>
     <h3>Common</h3>
     <TextInput metaName='title'
-      placeholder='Title'
+      label='Page Title'
+      placeholder='Page Title'
       onChange={onChange} />
     <TextInput metaName='description'
-      placeholder='Description'
+      label='Page Description'
+      placeholder='Page Description'
       onChange={onChange} />
     <TextInput metaName='image'
-      placeholder='Site Image'
+      label='Site Image'
+      placeholder='https://example.com/image.jpg'
       onChange={onChange} />
   </div>
 )
