@@ -4,6 +4,13 @@ export default {
       title: '',
       description: '',
       image: ''
+    },
+    Twitter: {
+      card: '',
+      site: '',
+      creator: '',
+      'image:src': '',
+      player: ''
     }
   }
 }

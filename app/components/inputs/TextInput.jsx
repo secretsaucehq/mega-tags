@@ -15,8 +15,8 @@ const TextInput = ({ metaName, placeholder, onChange }) => (
 // TODO: make sure isOptional is real proptype
 TextInput.propTypes = {
   metaName: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
-  placeholder: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string
 }
 
 export default TextInput

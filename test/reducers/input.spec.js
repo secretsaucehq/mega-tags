@@ -1,6 +1,6 @@
 import inputReducer from 'app/reducers/input'
 import initialState from 'app/data/initial-state'
-import { updateCommon } from 'app/actions/common'
+import { updateCommon } from 'app/actions'
 import { expect } from 'chai'
 
 describe('inputReducer', () => {

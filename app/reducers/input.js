@@ -1,4 +1,4 @@
-import { Actions } from 'app/actions'
+import { Actions } from 'app/actions/types'
 
 const updateCommon = (state, action) => {
   switch (action.type) {
@@ -11,6 +11,17 @@ const updateCommon = (state, action) => {
   }
 }
 
+const updateTwitter = (state, action) => {
+  switch(action.type) {
+  case Actions.UPDATE:
+    return {
+      ...state,
+      ...action.updatedTwitter
+    }
+  default: return state;
+  }
+}
+
 export default (state={}, action) => {
   switch (action.category) {
   case 'Common':
@@ -18,6 +29,12 @@ export default (state={}, action) => {
       ...state,
       Common: updateCommon(state.Common, action)
     }
+  case 'Twitter':
+    return {
+      ...state,
+      Twitter: updateTwitter(state.Twitter, action)
+    }
   default: return state
   }
 }
+
