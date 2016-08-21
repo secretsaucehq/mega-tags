@@ -16,3 +16,10 @@ export const updateTwitter = (updatedTwitter) => {
   }
 }
 
+export const updateProviders = (updatedProviders) => {
+  return {
+    type: Actions.UPDATE,
+    category: 'Providers',
+    updatedProviders
+  }
+}

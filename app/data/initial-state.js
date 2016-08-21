@@ -1,4 +1,8 @@
 export default {
+  providers: {
+    Twitter: true,
+    OpenGraphGeneral: false
+  },
   output: {
     Common: {
       title: '',
