@@ -1,15 +1,16 @@
 import React, { PropTypes } from 'react'
+import SingleMetaOutput from 'app/components/SingleMetaOutput'
 
 const Twitter = ({ Common, card, site, creator, image, player }) => (
   <div className='output-twitter'>
     <h3>Twitter</h3>
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:card" content="${card}"`}} />
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:title" content="${Common.title}"`}} />
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:description" content="${Common.description}"`}} />
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:site" content="${site}"`}} />
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:creator" content="${creator}"`}} />
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:image:src" content="${image}"`}} />
-    <div dangerouslySetInnerHTML={{__html: `meta name="twitter:player" content="${player}"`}} />
+    <SingleMetaOutput name='twitter:card' content={card} />
+    <SingleMetaOutput name='twitter:title' content={Common.title} />
+    <SingleMetaOutput name='twitter:description' content={Common.description} />
+    <SingleMetaOutput name='twitter:site' content={site} />
+    <SingleMetaOutput name='twitter:creator' content={creator} />
+    <SingleMetaOutput name='twitter:image:src' content={image} />
+    <SingleMetaOutput name='twitter:player' content={player} />
   </div>
 )
 
